@@ -1,0 +1,64 @@
+{% load static %}
+
+<!doctype html>
+
+<head>
+    <title>Crypto Confirmar</title>
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+</head>
+ 
+<body width="100%">
+
+    <div width="100%" height="5%" style="background-color:gray;border-bottom:8px solid black;">
+        <center>
+            <img src="{% static 'comprar.png' %}"
+                width="20%" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <img src="{% static 'vender.png' %}" width="20%" />
+        </center>
+    </div>
+
+    <center>
+        <h1>Transacciones Confirmados</h1>
+    </center>
+
+    <center>
+        {% for i in btc_bep20 %}
+        <div style="background-color:rgba(58, 227, 58, 0.8); color:white; border: 6px solid black; border-radius: 20px 20px; font-size: xx-large;">
+            BTC-BEP20&nbsp&nbsp&nbsp&nbsp&nbsp{{i}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <img src="{% static 'btc.png' %}" height="3%" />
+        </div>
+        <br>
+        <br>
+        {% endfor %}
+        {% for i in eth_bep20 %}
+        <div style="background-color:rgba(58, 227, 58, 0.8); color:white; border: 6px solid black; border-radius: 20px 20px; font-size: xx-large">
+            ETH-BEP20&nbsp&nbsp&nbsp&nbsp&nbsp{{i}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <img src="{% static 'eth.png' %}" height="3%" />
+        </div>
+        <br>
+        <br>
+        {% endfor %}
+        {% for i in TRON_BEP20 %}
+        <div style="background-color:rgba(58, 227, 58, 0.8); color:white; border: 6px solid black; border-radius: 20px 20px; font-size: xx-large">
+            TRON&nbsp&nbsp&nbsp&nbsp&nbsp{{i}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <img src="{% static 'trx.png' %}" height="3%" />
+        </div>
+        <br>
+        <br>
+        {% endfor %}
+        {% for i in sol %}
+        <div style="background-color:rgba(58, 227, 58, 0.8); color:white; border: 6px solid black; border-radius: 20px 20px; font-size: xx-large">
+            TRON-BEP20&nbsp&nbsp&nbsp&nbsp&nbsp{{i}}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <img src="{% static 'sol.png' %}" height="3%" />
+        </div>
+        <br>
+        <br>
+        {% endfor %}
+        
+
+            <img src="{% static 'logo.png' %}" height="20%" />
+
+</body>
+
+</html>
